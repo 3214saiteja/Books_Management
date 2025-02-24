@@ -11,9 +11,9 @@ describe("Books API", function () {
     if (mongoose.connection.readyState !== 1) {
       try {
         await mongoose.connect(process.env.MONGO_URI);
-        console.log("✅ MongoDB connected for testing.");
+        console.log(" MongoDB connected for testing.");
       } catch (error) {
-        console.error("❌ MongoDB connection error:", error);
+        console.error(" MongoDB connection error:", error);
         throw error;
       }
     }
@@ -23,9 +23,9 @@ describe("Books API", function () {
   after(async function () {
     try {
       await mongoose.disconnect(); // Fully close all DB connections
-      console.log("✅ MongoDB connection closed after testing.");
+      console.log("MongoDB connection closed after testing.");
     } catch (error) {
-      console.error("❌ Error closing MongoDB connection:", error);
+      console.error("Error closing MongoDB connection:", error);
     }
   });
 
