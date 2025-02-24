@@ -42,7 +42,81 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Delete books by id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Rich dad poor dad\",\r\n  \"author\": \"Robert Kiyosaki\",\r\n  \"publishedDate\": \"2000-2013\",\r\n  \"genre\": \"Money management\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/books/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"books",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27-2sU+wH8LsO2HgYqDa0daGODIV30\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Feb 2025 14:25:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Book deleted successfully\"\n}"
+				}
+			]
 		},
 		{
 			"name": "get books",
@@ -64,7 +138,65 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "get books",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "839"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"347-FUzEmGguuhrWLttA5NctmQgAK0M\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Feb 2025 14:26:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"title\": \"The Alchemist - New Edition\",\n        \"author\": \"Paulo Coelho\",\n        \"publishedDate\": \"1988-04-15T00:00:00.000Z\",\n        \"genre\": \"Fiction\",\n        \"createdAt\": \"2025-02-24T09:00:13.120Z\",\n        \"updatedAt\": \"2025-02-24T11:33:42.429Z\",\n        \"id\": 1\n    },\n    {\n        \"title\": \"Atomic Habits\",\n        \"author\": \"James Clear\",\n        \"publishedDate\": \"2018-10-16T00:00:00.000Z\",\n        \"genre\": \"Self-Help\",\n        \"createdAt\": \"2025-02-24T14:24:47.448Z\",\n        \"updatedAt\": \"2025-02-24T14:24:47.448Z\",\n        \"id\": 3\n    },\n    {\n        \"title\": \"The Great Gatsby\",\n        \"author\": \"F. Scott Fitzgerald\",\n        \"publishedDate\": \"1925-04-10T00:00:00.000Z\",\n        \"genre\": \"Classic\",\n        \"createdAt\": \"2025-02-24T14:26:09.564Z\",\n        \"updatedAt\": \"2025-02-24T14:26:09.564Z\",\n        \"id\": 4\n    },\n    {\n        \"title\": \"Sapiens: A Brief History of Humankind\",\n        \"author\": \"Yuval Noah Harari\",\n        \"publishedDate\": \"2011-02-04T00:00:00.000Z\",\n        \"genre\": \"History\",\n        \"createdAt\": \"2025-02-24T14:26:25.629Z\",\n        \"updatedAt\": \"2025-02-24T14:26:25.629Z\",\n        \"id\": 5\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "get books by id",
@@ -75,7 +207,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/books/1",
+					"raw": "http://localhost:5000/books/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -83,11 +215,70 @@
 					"port": "5000",
 					"path": [
 						"books",
-						"1"
+						"3"
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "get books by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/books/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"books",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "196"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c4-8MkzBc9k6rYZZnweNUIaRNB6iEw\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Feb 2025 14:25:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Atomic Habits\",\n    \"author\": \"James Clear\",\n    \"publishedDate\": \"2018-10-16T00:00:00.000Z\",\n    \"genre\": \"Self-Help\",\n    \"createdAt\": \"2025-02-24T14:24:47.448Z\",\n    \"updatedAt\": \"2025-02-24T14:24:47.448Z\",\n    \"id\": 3\n}"
+				}
+			]
 		},
 		{
 			"name": "add books",
@@ -105,7 +296,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"Rich dad poor dad\",\r\n  \"author\": \"Robert Kiyosaki\",\r\n  \"publishedDate\": \"1988-04-15\",\r\n  \"genre\": \"Money\"\r\n}\r\n",
+					"raw": "  {\r\n        \"title\": \"Atomic Habits\",\r\n        \"author\": \"James Clear\",\r\n        \"publishedDate\": \"2018-10-16T00:00:00.000Z\",\r\n        \"genre\": \"Self-Help\"\r\n    }\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -124,7 +315,80 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "add books",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"title\": \"Sapiens: A Brief History of Humankind\",\r\n        \"author\": \"Yuval Noah Harari\",\r\n        \"publishedDate\": \"2011-02-04T00:00:00.000Z\",\r\n        \"genre\": \"History\"\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "265"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"109-qFQrrJzyL3k1Og1sbPFbpTDXRt4\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Feb 2025 14:26:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Sapiens: A Brief History of Humankind\",\n    \"author\": \"Yuval Noah Harari\",\n    \"publishedDate\": \"2011-02-04T00:00:00.000Z\",\n    \"genre\": \"History\",\n    \"_id\": \"67bc8191d7d5c4600efd2dcc\",\n    \"createdAt\": \"2025-02-24T14:26:25.629Z\",\n    \"updatedAt\": \"2025-02-24T14:26:25.629Z\",\n    \"id\": 5,\n    \"__v\": 0\n}"
+				}
+			]
 		},
 		{
 			"name": "update books",
@@ -142,7 +406,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"Rich dad poor dad\",\r\n  \"author\": \"Robert Kiyosaki\",\r\n  \"publishedDate\": \"2000=10-05\",\r\n  \"genre\": \"Money\"\r\n}\r\n",
+					"raw": "{\r\n  \"title\": \"Rich dad poor dad\",\r\n  \"author\": \"Robert Kiyosaki\",\r\n  \"publishedDate\": \"2000=10-06\",\r\n  \"genre\": \"Money\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -162,7 +426,81 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "update books",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Rich dad poor dad\",\r\n  \"author\": \"Robert Kiyosaki\",\r\n  \"publishedDate\": \"2000=10-06\",\r\n  \"genre\": \"Money\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/books/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"books",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "200"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c8-LxCqXh1NTSEtnhI6lUoiY0UVUI8\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Feb 2025 14:24:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Rich dad poor dad\",\n    \"author\": \"Robert Kiyosaki\",\n    \"publishedDate\": \"2000-10-05T18:30:00.000Z\",\n    \"genre\": \"Money\",\n    \"createdAt\": \"2025-02-24T11:36:34.173Z\",\n    \"updatedAt\": \"2025-02-24T14:24:15.837Z\",\n    \"id\": 2\n}"
+				}
+			]
 		}
 	]
 }
