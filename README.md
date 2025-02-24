@@ -56,6 +56,9 @@ curl -X PUT http://localhost:5000/books/BOOK_ID \
 curl -X DELETE http://localhost:5000/books/BOOK_ID
 
 ### Running Tests (If Implemented)
-npm test
+npx mocha
+(or)
+npx mocha tests/book.test.js
+
 
 ```
